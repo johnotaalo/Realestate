@@ -10,41 +10,50 @@
           <h3>Registration | Houses </h3>
         </div>
         <div class="content">
-          <form role="form"> 
+        <?php echo form_open("houses/registerhouse"); ?> 
             <div class="form-group">
-              <label>House Name</label> 
-              <input type="text" placeholder="Enter email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Email address</label>
-              <select placeholder="Select Building" class="form-control">
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Email address</label> 
-              <input type="email" placeholder="Enter email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Email address</label> 
-              <input type="email" placeholder="Enter email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Email address</label> 
-              <input type="email" placeholder="Enter email" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Email address</label> 
-              <input type="email" placeholder="Enter email" class="form-control">
+              <label>House Name: </label> 
+              <input type="text" placeholder="Enter house name" class="form-control">
             </div>
 
-            <div class="form-group"> 
-              <label>Password</label> <input type="password" placeholder="Password" class="form-control">
-            </div> 
+            <div class="form-group">
+              <label>House No : </label> 
+              <input type="text" name="house_no" placeholder="Enter house no" class="form-control">
+            </div>
+
+             <div class="form-group">
+              <label>Select Estate</label>
+              <select placeholder="Enter the building" name="estate" class="form-control">
+                <optgroup>
+                  <option value="0">--Select Estate--</option>
+                  <option value="1">Test selection</option>
+                  <option value="2">Test selection two</option>
+                  <option value="3">Test selection three</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Select Building</label>
+              <select placeholder="Enter the building" name="building" class="form-control">
+                <optgroup>
+                  <option value="0">--Select Building--</option>
+                  <option value="1">Test selection</option>
+                  <option value="2">Test selection two</option>
+                  <option value="3">Test selection three</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>State: </label> 
+              <input type="text" name="state" placeholder="Enter house state" class="form-control">
+            </div>
+
             <div class="checkbox">
-              <label> <input type="checkbox"> Remember me </label> </div> 
               <button class="btn btn-primary" type="submit">Submit</button>
               <button class="btn btn-default">Cancel</button>
-            </form>
+            <?php echo form_close(); ?>
         </div>
       </div>				
   </div>

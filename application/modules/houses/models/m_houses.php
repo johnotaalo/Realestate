@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class MY_Model extends MY_Model {
+class M_houses extends MY_Model {
 
 	function __construct()
     {
@@ -9,14 +9,22 @@ class MY_Model extends MY_Model {
         date_default_timezone_set('Africa/Nairobi');
     }
 
-    public function template_function(){
-    	$query -> Doctrine_Manager::getInstance()->getCurrentConnection()->fetchAll("insert query here");
-    	return $query;
+    public function templatefunction(){
+    	$query = $this->db->query("insert query here");
+    	$result = $query->result_array();
+
+    	return $result;
     }
 
-    public function register_house(){
-    	$recieved = $this->input->post();
-    	echo "<pre>";print_r($recieved);echo "</pre>";exit;
+    public function all_houses(){
+    	$query = $this->db->query("
+    		SELECT DISTINCT h.house_no,h.state, b.build_name,b.build_desc,e.est_name,e.location,e.description,e.added_on 
+			FROM house h,buildings b,estate e,house_specifics hs
+			WHERE b.build_id = h.build_id AND hs.house_id = h.house_id AND b.est_id = e.est_id
+    		");
+
+    	$result = $query->result_array();
+    	return $result;
     }
     
 }
