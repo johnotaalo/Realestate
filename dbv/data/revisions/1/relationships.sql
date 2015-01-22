@@ -1,5 +1,5 @@
 ALTER TABLE `realestate`.`buildings` 
-ADD INDEX `building_estate_idx` (`est_id` ASC);
+ADD INDEX `building_estate1_idx` (`est_id` ASC);
 ALTER TABLE `realestate`.`buildings` 
 ADD CONSTRAINT `building_estate`
   FOREIGN KEY (`est_id`)
