@@ -17,8 +17,9 @@
                 <label class="col-sm-3 control-label">Estate</label>
                 <div class="col-sm-6">
                   <select name="estateid" class="form-control" required>
-                    <option selected="selected" value="NULL">Select the Estate</option>
-                    <option value="1">Rubia</option>  
+                    
+                        <?php echo $estate_types?>
+                      
                   </select>									
                 </div>
               </div>
@@ -41,11 +42,9 @@
                 <label class="col-sm-3 control-label">House Type</label>
                 <div class="col-sm-6">
                   <select name="housetype" class="form-control" required>
-                    <option selected="selected" value="NULL">Select the House Type</option>
-                    <option value="1">Flat</option>  
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    
+
+                    <?php echo $house_types?>
                   </select>									
                 </div>
               </div>
