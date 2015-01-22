@@ -1,11 +1,10 @@
 <div>
 	<div class="cl-mcont">
 		<div class="page-head">
-			<h2>Blank Page</h2>
+			<h2>Dashboard</h2>
 			<ol class="breadcrumb">
 			  <li><a href="#">Home</a></li>
-			  <li><a href="#">Category</a></li>
-			  <li class="active">Sub Category</li>
+			  <li class="active"><a href="<?php echo base_url(); ?>admin">Dashboard</a></li>
 			</ol>
 		</div>		
 	    <div class="cl-mcont">
