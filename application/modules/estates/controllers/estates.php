@@ -18,7 +18,8 @@ class Estates extends MY_Controller
 	function newestate()
 	{
 		$data['error'] = '';
-		$this->load->view('addestate', $data);
+		$data['content_page'] = 'estates/addestate';
+		$this->template->call_admin_template($data);
 	}
 
 	function completeregistration()
@@ -31,14 +32,16 @@ class Estates extends MY_Controller
 		else
 		{
 			$data['error'] = 'Could not complete Registration. Try Again!';
-			$this->load->view('addestate', $data);
+			$data['content_page'] = 'estates/addestate';
+			$this->template->call_admin_template($data);
 		}
 	}
 
 	function estatelist()
 	{
 		$data['estate_table'] = $this->createestatesview('table');
-		$this->load->view('allestates', $data);
+		$data['content_page'] = 'estates/allestates';
+		$this->template->call_admin_template($data);
 	}
 
 	function createestatesview($type)
