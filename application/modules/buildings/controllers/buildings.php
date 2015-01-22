@@ -15,14 +15,14 @@ class Buildings extends MY_Controller
 
     function index()
 	{
-		$data['house_types']  = $this->get_housetype();
-		$data['estate_types'] = $this->get_estate();
+		$data['house_types']  = $this->gethousetype();
+		$data['estate_types'] = $this->getestate();
 
 		$this->load->view('buildings', $data);
 	}
 	
 
-	function get_estate()
+	function getestate()
 	{
         $results = $this->m_buildings->get_estates();
         
@@ -35,7 +35,7 @@ class Buildings extends MY_Controller
         return $est;
 	}
 
-	function get_housetype()
+	function gethousetype()
 	{
         $results = $this->m_buildings->get_housetype();
         
@@ -48,7 +48,7 @@ class Buildings extends MY_Controller
         return $htype;
 	}
 
-	function add_building()
+	function addbuilding()
 	{
 		
 	   $result = $this->m_buildings->enter_building();

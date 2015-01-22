@@ -11,7 +11,7 @@
 
 
 <div class="content">
-             <form class="form-horizontal group-border-dashed" method="POST"  action ="<?php echo base_url().'buildings/add_building'?>" style="border-radius: 0px;">
+             <form class="form-horizontal group-border-dashed" method="POST"  action ="<?php echo base_url().'buildings/addbuilding'?>" style="border-radius: 0px;">
 
               <div class="form-group">
                 <label class="col-sm-3 control-label">Estate</label>
