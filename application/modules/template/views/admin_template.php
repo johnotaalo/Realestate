@@ -29,7 +29,12 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/admin/js/jquery.codemirror/theme/ambiance.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/admin/js/jquery.vectormaps/jquery-jvectormap-1.2.2.css"  media="screen"/>
   
-	<link href="<?php echo base_url(); ?>assets/admin/css/style.css" rel="stylesheet" />	
+	<link href="<?php echo base_url(); ?>assets/admin/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/admin/js/jquery.datatables/bootstrap-adapter/css/datatables.css" />	
+  <script src="<?php echo base_url(); ?>assets/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.datatables/jquery.datatables.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.datatables/bootstrap-adapter/js/datatables.js"></script>
+
     
 </head>
 <body class="animated">
@@ -146,11 +151,11 @@
   
   <!--Begining of content page-->
   <!--Content pages goes here-->
-  <?php
-    $this->load->view($content_page);
-  ?>
+  
 	<div class="cl-mcont">		<div class="row">
-     
+    <?php
+      $this->load->view($content_page);
+    ?>
 	</div>
 	<!--End of content page-->
 
@@ -225,7 +230,7 @@
   </div>
 </nav>
   
-	<script src="<?php echo base_url(); ?>assets/admin/js/jquery.js"></script>
+	
 	<script src="<?php echo base_url(); ?>assets/admin/js/jquery.cookie/jquery.cookie.js"></script>
   <script src="<?php echo base_url(); ?>assets/admin/js/jquery.pushmenu/js/jPushMenu.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
@@ -267,21 +272,10 @@
         });
       });
     });
-  </script>   <script src="js/jquery.codemirror/lib/codemirror.js"></script>
-  <script src="<?php echo base_url(); ?>assets/admin/js/jquery.codemirror/mode/xml/xml.js"></script>
-  <script src="<?php echo base_url(); ?>assets/admin/js/jquery.codemirror/mode/css/css.js"></script>
-  <script src="<?php echo base_url(); ?>assets/admin/js/jquery.codemirror/mode/htmlmixed/htmlmixed.js"></script>
-  <script src="<?php echo base_url(); ?>assets/admin/js/jquery.codemirror/addon/edit/matchbrackets.js"></script>
+  </script>
   <script src="<?php echo base_url(); ?>assets/admin/js/jquery.vectormaps/jquery-jvectormap-1.2.2.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/admin/js/jquery.vectormaps/maps/jquery-jvectormap-world-mill-en.js"></script>
   <script src="<?php echo base_url(); ?>assets/admin/js/behaviour/dashboard.js"></script>
-  
-  
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.flot/jquery.flot.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.flot/jquery.flot.pie.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.flot/jquery.flot.resize.js"></script>
-<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/js/jquery.flot/jquery.flot.labels.js"></script>
 </body>
 
-<!-- Mirrored from www.condorthemes.com/flatdream/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Dec 2014 13:56:44 GMT -->
 </html>
