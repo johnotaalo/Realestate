@@ -22,7 +22,6 @@
             </div>
 
              <div class="form-group">
-              <label>Select Estate</label>
               <select placeholder="Enter the building" name="estate" class="form-control">
                 <optgroup>
                   <option value="0">--Select Estate--</option>
@@ -34,7 +33,6 @@
             </div>
 
             <div class="form-group">
-              <label>Select Building</label>
               <select placeholder="Enter the building" name="building" class="form-control">
                 <optgroup>
                   <option value="0">--Select Building--</option>

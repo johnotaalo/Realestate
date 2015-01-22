@@ -18,9 +18,7 @@ class M_houses extends MY_Model {
 
     public function all_houses(){
     	$query = $this->db->query("
-    		SELECT DISTINCT h.house_no,h.state, b.build_name,b.build_desc,e.est_name,e.location,e.description,e.added_on 
-			FROM house h,buildings b,estate e,house_specifics hs
-			WHERE b.build_id = h.build_id AND hs.house_id = h.house_id AND b.est_id = e.est_id
+    		SELECT h.house_no,h.state, b.build_name,b.build_desc,e.est_name,e.location,e.description,e.added_on FROM house h,buildings b,estate e WHERE b.build_id = h.build_id AND b.est_id = e.est_id
     		");
 
     	$result = $query->result_array();

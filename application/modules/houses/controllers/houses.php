@@ -15,7 +15,9 @@ class Houses extends MY_Controller {
 	}
 
 	public function register(){
-		$this->load->view('h_register');
+		$data['content_page'] = "houses/h_register";
+
+		$this->template->call_admin_template($data);
 	}
 
 	public function registerhouse(){
@@ -48,6 +50,7 @@ class Houses extends MY_Controller {
 
 		//echo "<pre>";print_r($houses_info);echo "</pre>";exit;
 		$data['houses_info'] = $houses_info;
-		$this->load->view('h_index',$data);
+		$data['content_page'] = 'houses/h_index';
+		$this->template->call_admin_template($data);
 	}
 }
