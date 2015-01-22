@@ -17,9 +17,7 @@
                 <label class="col-sm-3 control-label">Estate</label>
                 <div class="col-sm-6">
                   <select name="estateid" class="form-control" required>
-                    
                         <?php echo $estate_types?>
-                      
                   </select>									
                 </div>
               </div>
@@ -42,8 +40,6 @@
                 <label class="col-sm-3 control-label">House Type</label>
                 <div class="col-sm-6">
                   <select name="housetype" class="form-control" required>
-                    
-
                     <?php echo $house_types?>
                   </select>									
                 </div>
@@ -55,10 +51,6 @@
                 <button type="reset" class="btn btn-default">Reset</button>
               </div>
               </div>
-
-              <?php 
-                    echo form_close();
-              ?>
 
             </form>
           </div>

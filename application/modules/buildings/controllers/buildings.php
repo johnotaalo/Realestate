@@ -52,7 +52,8 @@ class Buildings extends MY_Controller
 	{
 		
 	   $result = $this->m_buildings->enter_building();
-        //echo $result;die();
+       
+       redirect('/','location');
 	}
     
 
