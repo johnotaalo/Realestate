@@ -47,7 +47,7 @@
 
               <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary">Complete Registration</button>
                 <button type="reset" class="btn btn-default">Reset</button>
               </div>
               </div>
