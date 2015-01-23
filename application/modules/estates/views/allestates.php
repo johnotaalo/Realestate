@@ -4,7 +4,7 @@
     <div class="block-flat">
       <div class="header">              
         <h3>List of all Estates</h3>
-        <div><button type="button" class="btn btn-success btn-flat"><i class="fa fa-th"></i> Switch to <span id = "view_type">Grid</span> View</button></div>
+        <div class = ''><button type="button" class="btn btn-success btn-flat"><i class="fa fa-th"></i> Switch to <span id = "view_type">Grid</span> View</button></div>
       </div>
       <div class="content">
         <div class="table-responsive">
@@ -34,4 +34,4 @@ $(document).ready(function(){
   $('.dataTables_length select').addClass('form-control');
 });
   
-</script>
+</script> 
