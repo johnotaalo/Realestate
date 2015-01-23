@@ -11,10 +11,12 @@
         </div>
         <div class="content">
         <?php echo form_open("houses/registerhouse"); ?> 
+            <!-- 
             <div class="form-group">
               <label>House Name: </label> 
               <input type="text" placeholder="Enter house name" class="form-control">
-            </div>
+            </div> 
+            -->
 
             <div class="form-group">
               <label>House No : </label> 
@@ -24,10 +26,14 @@
              <div class="form-group">
               <select placeholder="Enter the building" name="estate" class="form-control">
                 <optgroup>
-                  <option value="0">--Select Estate--</option>
-                  <option value="1">Test selection</option>
-                  <option value="2">Test selection two</option>
-                  <option value="3">Test selection three</option>
+                  <option value="0" selected="selected">--Select Estate--</option>
+                <?php 
+                  foreach ($estates as $est) {
+                    echo "
+                    <option value=".$est['est_id'].">".$est['est_name']."</option>
+                    ";
+                  }
+                 ?>
                 </optgroup>
               </select>
             </div>
@@ -35,10 +41,14 @@
             <div class="form-group">
               <select placeholder="Enter the building" name="building" class="form-control">
                 <optgroup>
-                  <option value="0">--Select Building--</option>
-                  <option value="1">Test selection</option>
-                  <option value="2">Test selection two</option>
-                  <option value="3">Test selection three</option>
+                  <option value="0" selected="selected">--Select Building--</option>
+                  <?php 
+                  foreach ($buildings as $bld) {
+                    echo "
+                    <option value=".$bld['build_id'].">".$bld['build_name']."</option>
+                    ";
+                  }
+                 ?>
                 </optgroup>
               </select>
             </div>

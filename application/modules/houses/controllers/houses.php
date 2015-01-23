@@ -10,11 +10,14 @@ class Houses extends MY_Controller {
 
 	public function index()
 	{
-		echo "Sth";exit;
+		//echo "Sth";exit;
 		$this->load->view('h_home');
 	}
 
 	public function register(){
+		//echo "Sth";exit;
+		$data['estates'] = $this->m_houses->estate_selection();
+		$data['buildings'] = $this->m_houses->building_selection();
 		$data['content_page'] = "houses/h_register";
 
 		$this->template->call_admin_template($data);
@@ -41,16 +44,24 @@ class Houses extends MY_Controller {
     	array_push($house_data, $house_info);
     	$insertion = $this->db->insert_batch("house",$house_data);
     	
-    	$this-> housesindex();
+		redirect(base_url() .'houses/housesindex/success');
 
 	}
 
-	public function housesindex(){
+	public function housesindex($successful_action = NULL){
 		$houses_info = $this->m_houses->all_houses();
-
+		$data['success'] =  (isset($successful_action))? 1 : NULL;
 		//echo "<pre>";print_r($houses_info);echo "</pre>";exit;
 		$data['houses_info'] = $houses_info;
+		// $data['success'] = 1;
 		$data['content_page'] = 'houses/h_index';
 		$this->template->call_admin_template($data);
+	}
+
+	public function deletehouse($house_id){
+		$deletion = $this->m_houses->delete_house($house_id);
+
+		// echo $deletion;exit;
+		redirect(base_url() .'houses/housesindex');
 	}
 }
