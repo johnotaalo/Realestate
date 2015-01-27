@@ -27,9 +27,9 @@
 	<link href="<?php echo base_url(); ?>assets/admin/css/style.css" rel="stylesheet" />	
 	<script>
 $(document).ready(function(){
-  <?php if($error){?>
+  <?php /*if($error){?>
     $.jGrowl('<?php echo $error; ?>', { sticky: true, theme: 'growl-error', header: 'Error!' });
-  <?php } ?>
+  <?php }*/ ?>
 });
 </script>
 </head>
