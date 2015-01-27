@@ -17,5 +17,10 @@ class template extends MY_Controller
 		// echo "<pre>";print_r($data);die();
 		$this->load->view('admin_template', $data);
 	}
+
+	public function call_auth_template($data=NULL)
+	{
+		$this->load->view('login_template', $data);
+	}
 }
 ?>
