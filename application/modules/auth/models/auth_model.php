@@ -3,7 +3,7 @@
 /**
 * 
 */
-class home_model extends MY_Model
+class auth_model extends MY_Model
 {
 	
 	function __construct()
