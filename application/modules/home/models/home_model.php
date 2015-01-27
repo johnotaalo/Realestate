@@ -18,18 +18,29 @@ class home_model extends MY_Model
 	function get_user_login($username,$password)
 	{
 		$user = array();
-    	$query = $this->db->get_where('users', array('username' => $username, 'password' => $password, 'is_active' => 1), 1);
-        
-    	$details = $query->result_array();
+        $query = "SELECT 
+                    `us`.`user_id`,
+                    `us`.`username`,
+                    `us`.`password`,
+                    `us`.`usertype_id`,
+                    `us`.`is_active`,
+                    `typ`.`id`,
+                    `typ`.`usertype`
+                FROM `users` `us`
+                LEFT JOIN `usertypes` `typ`
+                    ON `us`.`usertype_id` = `typ`.`id`
+                WHERE `us`.`username` = '$username' AND `us`.`password` = '$password' AND `us`.`is_active` = 1";
+        $query = $this->db->query($query);
+    	
+        $details = $query->result_array();
+        // echo "<pre>";print_r($details);die();
 
     	if($details)
     	{
     		$user['auth'] = TRUE;
     		$user['user_id'] = $details[0]['user_id'];
-    		$user['usertype'] = $details[0]['user_type'];
-
-    		redirect(base_url().'admin');
-    	}
+    		$user['usertype'] = $details[0]['usertype'];
+        }
     	else
     	{
     		$user['auth'] = FALSE;

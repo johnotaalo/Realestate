@@ -44,7 +44,7 @@ $(document).ready(function(){
 				<h3 class="text-center">Real Estate</h3>
 			</div>
 			<div>
-				<form method="post" style="margin-bottom: 0px !important;" class="form-horizontal" action="<?php echo base_url('home/login')?>">
+				<form method="post" style="margin-bottom: 0px !important;" class="form-horizontal" action="<?php echo base_url('home/authentication')?>">
 					<div class="content">
 						<h4 class="title">Login Access</h4>
 							<div class="form-group">
