@@ -17,5 +17,10 @@ class template extends MY_Controller
 		// echo "<pre>";print_r($data);die();
 		$this->load->view('admin_template', $data);
 	}
+
+	public function call_front_end_template($data=NULL)
+	{
+		$this->load->view('front_end_template', $data);
+	}
 }
 ?>

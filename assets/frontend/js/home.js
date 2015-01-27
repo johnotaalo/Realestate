@@ -1,9 +1,9 @@
 (function($) {
     "use strict";
 
-    if($.cookie("css")) {
-        $("#app").attr("href",$.cookie("css"));
-    }
+    // if($.cookie("css")) {
+    //     $("#app").attr("href",$.cookie("css"));
+    // }
     var themeColorPath = $("#app").attr("href");
     var themeColorFile = themeColorPath.replace("css/app-", "");
     var themeColor = themeColorFile.replace(".css", "");
@@ -351,8 +351,8 @@
         $('#signin').modal('show');
     });
 
-    $('.isThemeBtn').addClass("btn-" + themeColor.replace("css/app", "green"));
-    $('.isThemeText').addClass("text-" + themeColor.replace("css/app", "green"));
+    // $('.isThemeBtn').addClass("btn-" + themeColor.replace("css/app", "green"));
+    // $('.isThemeText').addClass("text-" + themeColor.replace("css/app", "green"));
 
     $('input, textarea').placeholder();
 

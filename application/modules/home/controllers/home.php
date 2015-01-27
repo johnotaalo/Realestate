@@ -13,7 +13,8 @@ class Home extends MY_Controller
 
 	public function index()
 	{
-		
+		$data['content_page'] = 'home/home';
+		$this->template->call_front_end_template($data);
 	}
 	
 	
