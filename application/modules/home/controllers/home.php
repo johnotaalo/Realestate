@@ -2,7 +2,7 @@
 /**
 * 
 */
-class home extends MY_Controller
+class Home extends MY_Controller
 {
 	
 	function __construct()
@@ -13,13 +13,9 @@ class home extends MY_Controller
 
 	public function index()
 	{
-		$this->login();
-	}
-	public function login()
-	{
 		$this->load->view("login");
 	}
-
+	
 	function authentication()
 	{
 		$username = $this->input->post('username');
@@ -28,11 +24,11 @@ class home extends MY_Controller
 		$hashed_password = md5($password);
 
 		$authenticate = $this->home_model->get_user_login($username,$hashed_password);
-		
+		// echo "<pre>";print_r($authenticate);die();
 		if($authenticate['auth'] == TRUE)
 		{
-			$user_id = $authentication['user_id'];
-			$user_type = $authentication['usertype'];
+			$user_id = $authenticate['user_id'];
+			$user_type = $authenticate['usertype'];
 			
 			$data = array(
 				'logged_in' => TRUE,
@@ -40,11 +36,9 @@ class home extends MY_Controller
 				'usertype' => $user_type
 			);
 
-			// echo $redirect_url;die();
 			$this->session->set_userdata($data);
-			echo "<pre>";print_r($this->session->all_userdata());die;
-			// echo base_url() . $redirect_url;die();
-			// redirect(base_url() . $redirect_url);
+			$redirect_url = $this->session->userdata('usertype');;
+			redirect(base_url() . $redirect_url);
 		}
 		else
 		{
