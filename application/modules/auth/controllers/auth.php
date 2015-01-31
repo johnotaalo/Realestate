@@ -13,7 +13,16 @@ class auth extends MY_Controller
 
 	public function index()
 	{
-		$this->load->view("login");
+		$data['content_page'] = 'auth/login';
+		$data['title'] = 'Authentication | Login';
+		$this->template->call_auth_template($data);
+	}
+
+	public function sign_up()
+	{
+		$data['content_page'] = 'auth/signup';
+		$data['title'] = 'Authentication | Sign up';
+		$this->template->call_auth_template($data);
 	}
 	
 	function authentication()
